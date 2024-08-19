@@ -8,7 +8,7 @@ import Header from '@cloudscape-design/components/header';
 import HelpPanel from '@cloudscape-design/components/help-panel';
 import SpaceBetween from '@cloudscape-design/components/space-between';
 import Breadcrumbs from '../../components/breadcrumbs';
-import Marketing from './components/marketing';
+import MeetingDetails from './components/marketing';
 import Navigation from '../../components/navigation';
 import Shape from './components/shape';
 import ShellLayout from '../../layouts/shell';
@@ -29,7 +29,7 @@ export default function App() {
         header={
           <Header
             variant="h1"
-            description="Create a new meeting by specifying details, quality, and price. On creation a meeting will be tested by the product and marketing team."
+            description="Create a new meeting by specifying details, event link, and speakers."
           >
             Create meeting
           </Header>
@@ -59,7 +59,7 @@ export default function App() {
                 <SpaceBetween size="l">
                   <Shape />
                   <details />
-                  <Marketing />
+                  <MeetingDetails />
                 </SpaceBetween>
               </Form>
             </form>

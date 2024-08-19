@@ -1,10 +1,10 @@
 // Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: MIT-0
 export const variationData = [
-  { title: 'White Raspberry', value: 14 },
-  { title: 'Dark Hazelnut', value: 32 },
-  { title: 'Milk Chocolate', value: 25 },
-  { title: 'Extra Dark', value: 49 },
+  { title: 'Games & 3D', value: 14 },
+  { title: 'Artificial Intelligence', value: 32 },
+  { title: 'Serverless Lens', value: 25 },
+  { title: 'Space & Satellite', value: 49 },
 ];
 
 export const breakdownItems = [
@@ -35,15 +35,13 @@ export const breakdownItems = [
 ];
 
 export const productionMetrics = [
-  { key: 'Bars per hour', value: '124k' },
-  { key: 'Active molders', value: '12' },
-  { key: 'Andon chord (last 24h)', value: '0' },
-  { key: 'Trucks loading', value: '2' },
+  { key: 'Community Members', value: '239' },
+  { key: '5 Star Reviews', value: '15' },
+  { key: 'Meetups Held', value: '33' },
+  { key: 'Est.', value: '2021' },
 ];
 
-export const quote = `The tasting on ${new Intl.DateTimeFormat('en-US').format(
-  new Date()
-)} among engineers and designers in London showed very positive reactions to the quality of the products. Participants tasted in average 2.3 samples from 4 different meetings. Tasting notes included fruity, and floral. The average net promoter score was 9.2.`;
+export const quote = `Holding our first meetup on International Women\'s Day 03/08/21 & Started at Arrowhead Research Park to further the community learning, business awareness, student engagement, career opportunities, and general entrepreneurial-garage-hobbyist spirit. We aim to learn from, serve, educate, and entertain the diverse people of the Juarez MX/El Paso + Las Cruces, all of New Mexico, and surrounding rural areas.`;
 export const notes = [
   { name: 'cherry', strong: 1, mild: 5, unnoticed: 14 },
   { name: 'raspberry', strong: 2, mild: 9, unnoticed: 9 },

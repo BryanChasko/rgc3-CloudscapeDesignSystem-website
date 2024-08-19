@@ -1,7 +1,7 @@
 // Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: MIT-0
 import React from 'react';
-import HelpPanel from '@cloudscape-design/components/help-panel';
+import { HelpPanelHome } from '../create-meeting/components/help-panel-home';
 
 import Breadcrumbs from '../../components/breadcrumbs';
 import Navigation from '../../components/navigation';
@@ -14,9 +14,9 @@ export default function App() {
   return (
     <ShellLayout
       contentType="table"
-      breadcrumbs={<Breadcrumbs active={{ text: 'meetings', href: '/meetings/index.html' }} />}
+      breadcrumbs={<Breadcrumbs active={{ text: 'Meetings', href: '/meetings/index.html' }} />}
       navigation={<Navigation />}
-      tools={<HelpPanel header={<h2>Help panel</h2>}></HelpPanel>}
+      tools={<HelpPanelHome />}
     >
       <VariationsTable meetings={variationsData} />
     </ShellLayout>

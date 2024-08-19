@@ -26,7 +26,7 @@ export interface VariationsProps {
 export default function meetings({ data, items }: VariationsProps) {
   return (
     <SpaceBetween size={'l'}>
-      <Container header={<Header variant="h2">meetings (last 24h)</Header>}>
+      <Container header={<Header variant="h2">Past Topics</Header>}>
         <PieChart data={data} hideFilter={true} i18nStrings={{
           chartAriaRoleDescription: 'Pie chart',
           detailPopoverDismissAriaLabel: 'Dismiss',
@@ -35,7 +35,7 @@ export default function meetings({ data, items }: VariationsProps) {
           segmentAriaRoleDescription: 'segment',
         }} />
       </Container>
-      <Table
+      {/*       <Table
         sortingColumn={columnDefinitions[0]}
         enableKeyboardNavigation={true}
         header={<Header variant="h2">Details</Header>}
@@ -45,6 +45,6 @@ export default function meetings({ data, items }: VariationsProps) {
           tableLabel: 'Details table',
         }}
       />
-    </SpaceBetween>
+ */}    </SpaceBetween>
   );
 }

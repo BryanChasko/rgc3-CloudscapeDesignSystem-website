@@ -11,19 +11,19 @@ export default function Shape() {
   const [shape, setShape] = useState('bar');
 
   return (
-    <Container header={<Header variant="h2">Chocolate shape</Header>}>
+    <Container header={<Header variant="h2">Meeting Type</Header>}>
       <FormField label="Shape" stretch={true}>
         <Tiles
           items={[
             {
-              value: 'bar',
-              label: 'Bar',
-              description: 'Traditional bar-shaped chocolate',
+              value: 'virtual',
+              label: 'Virtual',
+              description: 'Virtual Only Meetups',
             },
             {
-              value: 'praline',
-              label: 'Pralines',
-              description: 'Sophisticated and premium-looking chocolate shape',
+              value: 'inperson',
+              label: 'In-Person',
+              description: 'In person hosted events, including hybrid',
             },
           ]}
           value={shape}

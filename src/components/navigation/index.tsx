@@ -6,7 +6,7 @@ import SideNavigation, { SideNavigationProps } from '@cloudscape-design/componen
 const items: SideNavigationProps['items'] = [
   { type: 'link', text: 'Dashboard', href: '/home/index.html' },
   { type: 'link', text: 'Meetings', href: '/meetings/index.html' },
-  { type: 'link', text: 'Create meeting', href: '/create-meeting/index.html' },
+  /* { type: 'link', text: 'Create meeting', href: '/create-meeting/index.html' }, */
 ];
 
 export default function Navigation() {
@@ -14,7 +14,7 @@ export default function Navigation() {
     <>
       <SideNavigation
         activeHref={location.pathname}
-        header={{ href: '/home/index.html', text: 'Service' }}
+        header={{ href: '/home/index.html', text: 'Navigation' }}
         items={items}
       />
     </>

@@ -24,14 +24,14 @@ export default function QualityReport({ quote, notes }: QualityReportProps) {
   const [showTastingNotes, setShowTastingNotes] = useState(false);
 
   return (
-    <Container header={<Header variant="h2">Quality report</Header>}>
-      <Box variant="p">Report from latest tasting:</Box>
+    <Container header={<Header variant="h2">#AWSelfTaught User Group</Header>}>
+      <Box variant="p">Rio Grande Cloud Corridor (RGC3):</Box>
       <Box color="text-body-secondary">{quote}</Box>
-      <Button variant="normal" onClick={() => setShowTastingNotes(true)}>
-        View tasting notes
-      </Button>
+      {/* <Button variant="normal" onClick={() => setShowTastingNotes(true)}>
+        About Services Discussed
+      </Button> */}
       {showTastingNotes ? (
-        <Modal visible={true} onDismiss={() => setShowTastingNotes(false)} header="Tasting notes">
+        <Modal visible={true} onDismiss={() => setShowTastingNotes(false)} header="Group notes">
           <Table
             sortingColumn={columnDefinitions[0]}
             enableKeyboardNavigation={true}

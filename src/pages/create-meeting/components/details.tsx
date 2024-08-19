@@ -9,13 +9,13 @@ import Multiselect, { MultiselectProps } from '@cloudscape-design/components/mul
 import RadioGroup from '@cloudscape-design/components/radio-group';
 import SpaceBetween from '@cloudscape-design/components/space-between';
 
-import { fruits, chocolate } from '../../meetings/data';
+import { services, meeting_type } from '../../meetings/data';
 import { BasicValidationContext } from '../validation/basic-validation';
 
-const options = [...fruits, ...chocolate].map(i => ({ value: i, label: i }));
+const options = [...services, ...meeting_type].map(i => ({ value: i, label: i }));
 
 export default function details() {
-  const [organic, setOrganic] = useState('yes');
+  const [published, setPublished] = useState('yes');
   const [selecteddetails, setSelecteddetails] = useState<MultiselectProps['selectedOptions']>([]);
 
   return (
@@ -45,10 +45,10 @@ export default function details() {
                   ref={ref => addErrorField('selecteddetails', { isValid: !detailsErrorText, ref })}
                 />
               </FormField>
-              <FormField label="Organic">
+              <FormField label="Published">
                 <RadioGroup
-                  value={organic}
-                  onChange={({ detail }) => setOrganic(detail.value)}
+                  value={published}
+                  onChange={({ detail }) => setPublished(detail.value)}
                   items={[
                     { value: 'no', label: 'No' },
                     { value: 'yes', label: 'Yes' },

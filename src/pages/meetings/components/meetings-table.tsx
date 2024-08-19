@@ -23,47 +23,35 @@ const getHeaderCounterText = (items: readonly meeting[] = [], selectedItems: rea
 
 const columnDefinitions: TableProps<meeting>['columnDefinitions'] = [
   {
-    header: 'Name',
+    header: 'Meetup Title',
     cell: ({ name }) => name,
     sortingField: 'name',
     minWidth: 175,
   },
   {
-    header: 'Sold (last month)',
-    cell: ({ sold }) => sold,
-    sortingField: 'sold',
+    header: 'Presenters',
+    cell: ({ presenters }) => presenters,
+    sortingField: 'presenters',
     minWidth: 160,
   },
   {
-    header: 'Produced (last month)',
-    cell: ({ produced }) => produced,
-    sortingField: 'produced',
+    header: 'Happened?',
+    cell: ({ happened }) => happened,
+    sortingField: 'happened',
+    minWidth: 90,
+  },
+  {
+    header: 'On-Demand',
+    cell: ({ ondemand }) => ondemand,
+    sortingField: 'ondemand',
+    minWidth: 140,
+  },
+  {
+    header: 'Event Page',
+    cell: ({ eventlink }) => eventlink,
+    sortingField: 'eventlink',
     minWidth: 160,
-  },
-  {
-    header: 'Estimated (next month)',
-    cell: ({ estimated }) => estimated,
-    sortingField: 'estimated',
-    minWidth: 150,
-  },
-  {
-    header: 'Retail price (USD)',
-    cell: ({ retailPrice }) => retailPrice,
-    sortingField: 'retailPrice',
-    minWidth: 160,
-  },
-  {
-    header: 'Total revenue (USD)',
-    cell: ({ totalRevenue }) => totalRevenue,
-    sortingField: 'totalRevenue',
-    minWidth: 180,
-  },
-  {
-    header: 'Total cost (USD)',
-    cell: ({ totalCost }) => totalCost,
-    sortingField: 'totalCost',
-    minWidth: 180,
-  },
+  }
 ];
 
 const EmptyState = ({ title, subtitle, action }: { title: string; subtitle: string; action: ReactNode }) => {
@@ -116,7 +104,7 @@ export default function VariationTable({ meetings }: VariationTableProps) {
       stickyHeader={true}
       resizableColumns={true}
       variant="full-page"
-      selectionType="single"
+      //selectionType="single"
       ariaLabels={{
         selectionGroupLabel: 'Items selection',
         itemSelectionLabel: ({ selectedItems }, item) => {
@@ -132,7 +120,7 @@ export default function VariationTable({ meetings }: VariationTableProps) {
           actions={
             <SpaceBetween size="xs" direction="horizontal">
               <Button disabled={collectionProps.selectedItems?.length === 0}>Edit</Button>
-              <Button href="/create-meeting/index.html" variant="primary">
+              <Button disabled={collectionProps.selectedItems?.length === 0} href="/create-meeting/index.html" variant="primary">
                 Create meeting
               </Button>
             </SpaceBetween>

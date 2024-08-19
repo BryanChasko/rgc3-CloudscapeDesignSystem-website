@@ -4,6 +4,7 @@ import React from 'react';
 import AppLayout, { AppLayoutProps } from '@cloudscape-design/components/app-layout';
 import TopNavigation from '@cloudscape-design/components/top-navigation';
 
+
 import './styles.css';
 
 export interface ShellProps {
@@ -21,8 +22,8 @@ export default function Shell({ children, contentType, breadcrumbs, tools, navig
       <div id="top-nav">
         <TopNavigation
           identity={{
-            logo: { src: '/logo.svg', alt: 'Chocolate Factory Logo' },
-            title: 'Chocolate Factory',
+            /*             logo: { src: '/logo.svg', alt: 'Rio Grande Corridor Cloud Community Logo' }, */
+            title: 'Rio Grande Corridor Cloud Community',
             href: '/home/index.html',
           }}
           i18nStrings={{

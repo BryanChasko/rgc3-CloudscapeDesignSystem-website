@@ -11,25 +11,25 @@ import SpaceBetween from '@cloudscape-design/components/space-between';
 import { useState } from 'react';
 import { BasicValidationContext } from '../validation/basic-validation';
 
-export default function Marketing() {
+export default function MeetingDetails() {
   const [wholeSalePrice, setWholeSalePrice] = useState('');
-  const [retailPrice, setRetailPrice] = useState('');
+  const [presenterName, setRetailPrice] = useState('');
   const [additionalNotes, setAdditionalNotes] = useState('');
   const isEmptyString = (value: string) => !value?.length;
 
   return (
     <BasicValidationContext.Consumer>
       {({ isFormSubmitted, addErrorField }) => {
-        const wholeSalePriceErrorText = isEmptyString(wholeSalePrice) && 'Wholesale price is required.';
-        const retailPriceErrorText = isEmptyString(retailPrice) && 'Retail price is required.';
+        const wholeSalePriceErrorText = isEmptyString(wholeSalePrice) && 'Link is required.';
+        const presenterNameErrorText = isEmptyString(presenterName) && 'Presenter is required.';
 
         return (
-          <Container header={<Header variant="h2">Marketing</Header>}>
+          <Container header={<Header variant="h2">MeetingDetails</Header>}>
             <FormField label="Prices" description="Define the prices for wholesale and retail.">
               <SpaceBetween direction="vertical" size="l">
                 <ColumnLayout columns={2}>
                   <FormField
-                    label="Wholesale price"
+                    label="Meetup Link"
                     stretch={true}
                     errorText={isFormSubmitted && wholeSalePriceErrorText}
                     i18nStrings={{
@@ -39,26 +39,26 @@ export default function Marketing() {
                     <Input
                       value={wholeSalePrice}
                       onChange={({ detail }) => setWholeSalePrice(detail.value)}
-                      type="number"
+                      type="text"
                       ref={ref => {
                         addErrorField('wholeSalePrice', { isValid: !wholeSalePriceErrorText, ref });
                       }}
                     />
                   </FormField>
                   <FormField
-                    label="Retail price"
+                    label="Speaker Names"
                     stretch={true}
-                    errorText={isFormSubmitted && retailPriceErrorText}
+                    errorText={isFormSubmitted && presenterNameErrorText}
                     i18nStrings={{
                       errorIconAriaLabel: 'Error',
                     }}
                   >
                     <Input
-                      value={retailPrice}
+                      value={presenterName}
                       onChange={({ detail }) => setRetailPrice(detail.value)}
-                      type="number"
+                      type="text"
                       ref={ref => {
-                        addErrorField('retailPrice', { isValid: !retailPriceErrorText, ref });
+                        addErrorField('presenterName', { isValid: !presenterNameErrorText, ref });
                       }}
                     />
                   </FormField>

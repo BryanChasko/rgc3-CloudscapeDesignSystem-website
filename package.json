@@ -14,7 +14,8 @@
   "dependencies": {
     "@cloudscape-design/collection-hooks": "^1.0.0",
     "@cloudscape-design/components": "^3.0.0",
-    "@cloudscape-design/design-tokens": "^3.0.0",
+    "@cloudscape-design/components-themeable": "^3.0.733",
+    "@cloudscape-design/design-tokens": "^3.0.43",
     "@cloudscape-design/global-styles": "^1.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
